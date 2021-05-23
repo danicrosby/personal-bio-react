@@ -1,5 +1,5 @@
 import axios from 'axios';
-import firebaseConfig from '../apiKeys';
+import firebaseConfig from './apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
@@ -34,4 +34,4 @@ const updateProject = (project) => new Promise((resolve, reject) => {
 
 export {
   addProject, getProjects, deleteProject, updateProject
-}
+};
