@@ -23,8 +23,7 @@ const ProjectForm = ({
   const handleInputChange = (e) => {
     setProject((prevState) => ({
       ...prevState,
-      [e.target.title]:
-        e.target.title === 'image' ? (e.target.value) : e.target.value,
+      [e.target.title]: e.target.value,
     }));
   };
 
@@ -77,7 +76,7 @@ const ProjectForm = ({
             title='image'
             id='image'
             value={project.image}
-            type='number'
+            type='text'
             placeholder='Enter a image'
             onChange={handleInputChange}
           />
@@ -94,7 +93,7 @@ ProjectForm.propTypes = {
   setProjects: PropTypes.func,
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.number,
+  image: PropTypes.string.isRequired,
   firebaseKey: PropTypes.string
 };
 

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import {
+  CardImg,
   Button,
   Card,
   CardText,
-  CardTitle
+  CardTitle,
+
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { deleteProject } from '../helpers/data/ProjectData';
@@ -33,8 +35,8 @@ const ProjectCard = ({
 
   return (
     <Card body>
-      <CardTitle tag="h5">{image}</CardTitle>
-      <CardText>{title}</CardText>
+      <CardImg src={image} rounded fluid />
+      <CardTitle tag="h5">Card Title</CardTitle>
       <CardText>{description}</CardText>
       <Button color="danger" onClick={() => handleClick('delete')}>Delete Project</Button>
       <Button color="info" onClick={() => handleClick('edit')}>
@@ -58,7 +60,7 @@ ProjectCard.propTypes = {
   firebaseKey: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  title: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
   setProjects: PropTypes.func
 };
 
