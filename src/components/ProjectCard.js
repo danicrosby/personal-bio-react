@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   CardImg,
   Button,
   Card,
   CardText,
   CardTitle,
-
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { deleteProject } from '../helpers/data/ProjectData';
@@ -19,6 +19,8 @@ const ProjectCard = ({
   setProjects
 }) => {
   const [editing, setEditing] = useState(false);
+  const history = useHistory();
+
   const handleClick = (type) => {
     switch (type) {
       case 'delete':
@@ -27,6 +29,9 @@ const ProjectCard = ({
         break;
       case 'edit':
         setEditing((prevState) => !prevState);
+        break;
+      case 'view':
+        history.push(`/player/${firebaseKey}`);
         break;
       default:
         console.warn('nothing selected');
@@ -38,8 +43,9 @@ const ProjectCard = ({
       <CardImg src={image} rounded fluid />
       <CardTitle tag="h5">{title}</CardTitle>
       <CardText>{description}</CardText>
-      <Button color="danger" onClick={() => handleClick('delete')}>Delete Project</Button>
-      <Button color="info" onClick={() => handleClick('edit')}>
+      <Button color="light" onClick={() => handleClick('view')}>View Project</Button>
+      <Button color="light" onClick={() => handleClick('delete')}>Delete Project</Button>
+      <Button color="light" onClick={() => handleClick('edit')}>
         {editing ? 'Close Form' : 'Edit Project'}
       </Button>
       {
@@ -48,7 +54,7 @@ const ProjectCard = ({
           setProjects={setProjects}
           firebaseKey={firebaseKey}
           image={image}
-          title={title}
+          name={title}
           description={description}
         />
       }
@@ -58,6 +64,8 @@ const ProjectCard = ({
 
 ProjectCard.propTypes = {
   firebaseKey: PropTypes.string.isRequired,
+  uid: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
