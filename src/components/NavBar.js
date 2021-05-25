@@ -18,35 +18,31 @@ const NavBar = ({ user }) => {
 
   const authenticated = () => (
     <>
-      <NavItem>
-        <Link className="nav-link" to="/projects">Projects</Link>
-      </NavItem>
-      <NavItem>
-        <Link className="nav-link" to="/technologies">Tech</Link>
-      </NavItem>
+      <NavItem><Link className="nav-link" to="/about">About</Link></NavItem>
+      <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
+      <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
     </>
   );
 
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <Link className="navbar-brand" to="/">About</Link>
+        <Link className="navbar-brand" to="/">Dani Crosby</Link>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            {user && authenticated()}
-            {
-              user !== null
-              && <NavItem>
-                {
-                  user
-                    ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
-                    : <Button color='info' onClick={signInUser}>Sign In</Button>
-                }
-              </NavItem>
-            }
-          </Nav>
-        </Collapse>
+        <Collapse isOpen={isOpen} navbar></Collapse>
+        <Nav className="ml-auto" navbar>
+          {user && authenticated()}
+          {
+            user !== null
+            && <NavItem>
+              {
+                user
+                  ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
+                  : <Button color='info' onClick={signInUser}>Sign In</Button>
+              }
+            </NavItem>
+          }
+        </Nav>
       </Navbar>
     </div>
   );
