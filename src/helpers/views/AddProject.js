@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectForm from '../components/ProjectForm';
+import ProjectForm from '../../components/ProjectForm';
 
 function AddProject({ setProjects }) {
   return (
