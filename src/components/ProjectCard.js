@@ -36,7 +36,7 @@ const ProjectCard = ({
   return (
     <Card body>
       <CardImg src={image} rounded fluid />
-      <CardTitle tag="h5">Card Title</CardTitle>
+      <CardTitle tag="h5">{title}</CardTitle>
       <CardText>{description}</CardText>
       <Button color="danger" onClick={() => handleClick('delete')}>Delete Project</Button>
       <Button color="info" onClick={() => handleClick('edit')}>
