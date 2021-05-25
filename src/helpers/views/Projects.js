@@ -11,7 +11,7 @@ function Projects({ projects, setProjects }) {
             key={projectInfo.firebaseKey}
             firebaseKey={projectInfo.firebaseKey}
             image={projectInfo.image}
-            title={projectInfo.title}
+            name={projectInfo.name}
             description={projectInfo.description}
             setProjects={setProjects}
           />

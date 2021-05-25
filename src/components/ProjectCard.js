@@ -14,7 +14,7 @@ import ProjectForm from './ProjectForm';
 const ProjectCard = ({
   firebaseKey,
   image,
-  title,
+  name,
   description,
   setProjects
 }) => {
@@ -41,7 +41,7 @@ const ProjectCard = ({
   return (
     <Card body>
       <CardImg src={image} rounded fluid />
-      <CardTitle tag="h5">{title}</CardTitle>
+      <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
       <Button color="light" onClick={() => handleClick('view')}>View Project</Button>
       <Button color="light" onClick={() => handleClick('delete')}>Delete Project</Button>
@@ -54,7 +54,7 @@ const ProjectCard = ({
           setProjects={setProjects}
           firebaseKey={firebaseKey}
           image={image}
-          name={title}
+          name={name}
           description={description}
         />
       }
@@ -68,7 +68,6 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
   setProjects: PropTypes.func
 };
 

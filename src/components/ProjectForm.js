@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
-  Button, Form, FormGroup, Label, Input
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { addProject, updateProject } from '../helpers/data/ProjectData';
@@ -8,36 +13,43 @@ import { addProject, updateProject } from '../helpers/data/ProjectData';
 const ProjectForm = ({
   firebaseKey,
   formTitle,
-  setProjects,
   image,
-  title,
+  name,
   description,
+  uid
 }) => {
   const [project, setProject] = useState({
     firebaseKey: firebaseKey || null,
-    title: title || '',
+    uid: uid || 0,
+    name: name || '',
     description: description || '',
     image: image || '',
   });
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     setProject((prevState) => ({
       ...prevState,
-      [e.target.title]: e.target.value,
+      [e.target.name]:
+        e.target.name === 'uid' ? Number(e.target.value) : e.target.value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (project.firebaseKey) {
-      updateProject(project).then(setProjects);
+      updateProject(project).then(setProject);
     } else {
-      addProject(project).then(setProjects);
+      addProject(project).then((response) => {
+        setProject(response);
+        history.push('/project');
+      });
+
       setProject({
-        firebaseKey: null,
-        title: '',
+        name: '',
         description: '',
-        image: '',
+        uid: 0,
+        firebaseKey: null
       });
     }
   };
@@ -47,13 +59,13 @@ const ProjectForm = ({
       <Form id='addProjectForm' autoComplete='off' onSubmit={handleSubmit}>
         <h2>{formTitle}</h2>
         <FormGroup>
-          <Label for="title"></Label>
+          <Label for="name"></Label>
           <Input
-            title='title'
-            id='title'
-            value={project.title}
+            name='name'
+            id='name'
+            value={project.name}
             type='text'
-            placeholder='Enter a project title'
+            placeholder='Enter a project name'
             onChange={handleInputChange}
           />
         </FormGroup>
@@ -61,11 +73,11 @@ const ProjectForm = ({
         <FormGroup>
           <Label for="description"></Label>
           <Input
-            title='description'
+            name='description'
             id='description'
             value={project.description}
             type='text'
-            placeholder='Enter a description title'
+            placeholder='Enter a description name'
             onChange={handleInputChange}
           />
         </FormGroup>
@@ -73,11 +85,23 @@ const ProjectForm = ({
         <FormGroup>
           <Label for="image"></Label>
           <Input
-            title='image'
+            name='image'
             id='image'
             value={project.image}
             type='text'
             placeholder='Enter a image'
+            onChange={handleInputChange}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="uid">UID:</Label>
+          <Input
+            name='uid'
+            id='uid'
+            value={project.uid}
+            type='number'
+            placeholder='Enter a uid'
             onChange={handleInputChange}
           />
         </FormGroup>
@@ -91,10 +115,12 @@ const ProjectForm = ({
 ProjectForm.propTypes = {
   formTitle: PropTypes.string.isRequired,
   setProjects: PropTypes.func,
-  title: PropTypes.string,
+  name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string.isRequired,
-  firebaseKey: PropTypes.string
+  firebaseKey: PropTypes.string,
+  uid: PropTypes.number,
+
 };
 
 export default ProjectForm;
