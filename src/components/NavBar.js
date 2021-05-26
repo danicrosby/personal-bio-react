@@ -18,7 +18,8 @@ const NavBar = ({ user }) => {
 
   const authenticated = () => (
     <>
-      <NavItem><Link className="nav-link" to="/add-project">Add Project</Link></NavItem>
+      <NavItem><Link className="nav-link" to="/project-admin">Project ADMIN</Link></NavItem>
+      <NavItem><Link className="nav-link" to="/add-project">Add Project ADMIN</Link></NavItem>
     </>
   );
 
@@ -29,8 +30,8 @@ const NavBar = ({ user }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar></Collapse>
         <Nav className="ml-auto" navbar>
-          <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
-          <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
+          <NavItem><Link className="nav-link" to="/projects">Projects VIEW</Link></NavItem>
+          <NavItem><Link className="nav-link" to="/technologies">Tech VIEW</Link></NavItem>
           {user && authenticated()}
           {
             user !== null

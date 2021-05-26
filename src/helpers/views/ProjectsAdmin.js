@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectCard from '../../components/ProjectCard';
 
-function ProjectsViewOnly({ projects, setProjects }) {
+function ProjectsAdmin({ projects, setProjects }) {
   return (
     <>
       <div className="card-container">
@@ -21,9 +21,9 @@ function ProjectsViewOnly({ projects, setProjects }) {
   );
 }
 
-ProjectsViewOnly.propTypes = {
+ProjectsAdmin.propTypes = {
   projects: PropTypes.array.isRequired,
   setProjects: PropTypes.func.isRequired
 };
 
-export default ProjectsViewOnly;
+export default ProjectsAdmin;

@@ -6,6 +6,7 @@ import Projects from './views/Projects';
 import Technologies from '../components/Technologies';
 import AddProject from './views/AddProject';
 import About from '../components/About';
+import ProjectsAdmin from '../components/ProjectsAdmin';
 
 export default function Routes({ admin, projects, setProjects }) {
   return (
@@ -33,6 +34,12 @@ export default function Routes({ admin, projects, setProjects }) {
         <Route
           path='/add-project'
           component={() => <AddProject
+          setProjects={setProjects} />}
+          admin={admin}
+        />
+        <Route
+          path='/project-admin'
+          component={() => <ProjectsAdmin
           setProjects={setProjects} />}
           admin={admin}
         />
