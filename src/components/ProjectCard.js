@@ -43,14 +43,14 @@ const ProjectCard = ({
       <CardImg src={image} rounded fluid />
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
-      <Button color="light" onClick={() => handleClick('view')}>Admin View</Button>
-      <Button className="buttons" color="light" onClick={() => handleClick('delete')}>Admin Delete</Button>
+      <Button color="light" onClick={() => handleClick('view')}>USER View</Button>
+      <Button className="buttons" color="light" onClick={() => handleClick('delete')}>USER Delete</Button>
       <Button className="buttons" color="light" onClick={() => handleClick('edit')}>
-        {editing ? 'Close Form' : 'Admin Edit'}
+        {editing ? 'Close Form' : 'USER Edit'}
       </Button>
       {
         editing && <ProjectForm
-          formTitle='Admin Edit'
+          formTitle='USER Edit'
           setPlayers={setProjects}
           firebaseKey={firebaseKey}
           name={name}

@@ -6,7 +6,7 @@ function Projects({ projects, setProjects }) {
   return (
     <>
       <div className="card-container">
-        {projects.map((projectInfo) => (
+        {projects?.map((projectInfo) => (
           <ProjectCard
             key={projectInfo.firebaseKey}
             firebaseKey={projectInfo.firebaseKey}

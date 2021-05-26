@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { deleteProject } from '../helpers/data/ProjectData';
 import ProjectForm from './ProjectForm';
 
-const ProjectsCRUD = ({
+const AdminProjectCard = ({
   firebaseKey,
   image,
   name,
@@ -62,7 +62,7 @@ const ProjectsCRUD = ({
   );
 };
 
-ProjectsCRUD.propTypes = {
+AdminProjectCard.propTypes = {
   firebaseKey: PropTypes.string.isRequired,
   uid: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -71,4 +71,4 @@ ProjectsCRUD.propTypes = {
   setProjects: PropTypes.func
 };
 
-export default ProjectsCRUD;
+export default AdminProjectCard;
