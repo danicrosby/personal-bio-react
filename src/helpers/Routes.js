@@ -1,21 +1,26 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import AddProject from './views/AddProject';
 import Home from './views/Home';
 import Projects from './views/Projects';
 import Technologies from '../components/Technologies';
+import AddProject from './views/AddProject';
+import About from '../components/About';
 
-export default function Routes({ projects, setProjects }) {
+export default function Routes({ admin, projects, setProjects }) {
   return (
     <div>
       <Switch>
         <Route
-          exact
-          path='/'
-          component={Home} />
+          exact path='/'
+          component={Home}
+        />
         <Route
-          path='/projects'
+          exact path='/about'
+          component={About}
+        />
+        <Route
+          exact path='/projects'
           component={() => <Projects
           projects={projects}
           setProjects={setProjects} />}
@@ -29,6 +34,7 @@ export default function Routes({ projects, setProjects }) {
           path='/add-project'
           component={() => <AddProject
           setProjects={setProjects} />}
+          admin={admin}
         />
       </Switch>
     </div>
@@ -36,6 +42,8 @@ export default function Routes({ projects, setProjects }) {
 }
 
 Routes.propTypes = {
-  projects: PropTypes.array.isRequired,
-  setProjects: PropTypes.func.isRequired
+  user: PropTypes.any,
+  projects: PropTypes.array,
+  setProjects: PropTypes.func,
+  admin: PropTypes.any,
 };
