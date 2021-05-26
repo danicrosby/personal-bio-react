@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import AddProject from './views/AddProject';
 import Home from './views/Home';
 import Projects from './views/Projects';
 import Technologies from '../components/Technologies';
@@ -9,14 +10,25 @@ export default function Routes({ projects, setProjects }) {
   return (
     <div>
       <Switch>
-        <Route exact path='/authed' component={Home} />
+        <Route
+          exact
+          path='/'
+          component={Home} />
         <Route
           path='/projects'
-          component={() => <Projects projects={projects} setProjects={setProjects} />}
+          component={() => <Projects
+          projects={projects}
+          setProjects={setProjects} />}
         />
         <Route
           path='/technologies'
-          component={() => <Technologies setProjects={setProjects} />}
+          component={() => <Technologies
+          setProjects={setProjects} />}
+        />
+        <Route
+          path='/add-project'
+          component={() => <AddProject
+          setProjects={setProjects} />}
         />
       </Switch>
     </div>

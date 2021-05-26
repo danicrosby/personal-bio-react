@@ -1,8 +1,8 @@
 import React from 'react';
-import profile from '../../styles/assets/profile.jpg';
-import about1 from '../../styles/assets/about1.png';
+import profile from '../styles/assets/profile.jpg';
+import about1 from '../styles/assets/about1.png';
 
-export default function Home() {
+export default function About() {
   return (
 
     <div className="jumbotron">

@@ -42,12 +42,13 @@ const ProjectForm = ({
     } else {
       addProject(project).then((response) => {
         setProject(response);
-        history.push('/project');
+        history.push('/projects');
       });
 
       setProject({
         name: '',
         description: '',
+        image: '',
         uid: 0,
         firebaseKey: null
       });

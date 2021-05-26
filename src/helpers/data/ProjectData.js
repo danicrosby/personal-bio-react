@@ -33,5 +33,5 @@ const updateProject = (project) => new Promise((resolve, reject) => {
 });
 
 export {
-  addProject, getProjects, deleteProject, updateProject
+  addProject, getProjects, deleteProject, updateProject,
 };

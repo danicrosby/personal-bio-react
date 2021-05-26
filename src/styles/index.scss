@@ -12,5 +12,22 @@ body {
   justify-content: center;
 }
 .tech-icons {
-  margin: .4em;
+  margin: .3em;
+}
+
+.profile-image {
+  width: 30em;
+}
+
+.about-img {
+  height: 15.5em
+}
+
+
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  margin-right: 10em;
+  background-color: white;
 }
