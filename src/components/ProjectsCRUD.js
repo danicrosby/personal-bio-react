@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { deleteProject } from '../helpers/data/ProjectData';
 import ProjectForm from './ProjectForm';
 
-const ProjectCard = ({
+const ProjectsCRUD = ({
   firebaseKey,
   image,
   name,
@@ -43,26 +43,26 @@ const ProjectCard = ({
       <CardImg src={image} rounded fluid />
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
-      <Button color="light" onClick={() => handleClick('view')}>View</Button>
-      <Button color="light" onClick={() => handleClick('delete')}>Delete</Button>
-      <Button color="light" onClick={() => handleClick('edit')}>
-        {editing ? 'Close Form' : 'Edit'}
+      <Button color="light" onClick={() => handleClick('view')}>Admin View</Button>
+      <Button className="buttons" color="light" onClick={() => handleClick('delete')}>Admin Delete</Button>
+      <Button className="buttons" color="light" onClick={() => handleClick('edit')}>
+        {editing ? 'Close Form' : 'Admin Edit'}
       </Button>
       {
         editing && <ProjectForm
-          formTitle='Edit Project'
-          setProjects={setProjects}
+          formTitle='Admin Edit'
+          setPlayers={setProjects}
           firebaseKey={firebaseKey}
-          image={image}
           name={name}
           description={description}
+          image={image}
         />
       }
     </Card>
   );
 };
 
-ProjectCard.propTypes = {
+ProjectsCRUD.propTypes = {
   firebaseKey: PropTypes.string.isRequired,
   uid: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -71,4 +71,4 @@ ProjectCard.propTypes = {
   setProjects: PropTypes.func
 };
 
-export default ProjectCard;
+export default ProjectsCRUD;

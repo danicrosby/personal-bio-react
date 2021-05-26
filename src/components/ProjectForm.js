@@ -49,7 +49,6 @@ const ProjectForm = ({
         name: '',
         description: '',
         image: '',
-        uid: 0,
         firebaseKey: null
       });
     }

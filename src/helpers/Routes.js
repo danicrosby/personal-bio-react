@@ -2,11 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Home from './views/Home';
-import Projects from './views/Projects';
+import Projects from '../components/Project';
 import Technologies from '../components/Technologies';
 import AddProject from './views/AddProject';
 import About from '../components/About';
-import ProjectsAdmin from '../components/ProjectsAdmin';
+import ProjectsCRUD from '../components/ProjectsCRUD';
 
 export default function Routes({ admin, projects, setProjects }) {
   return (
@@ -38,8 +38,8 @@ export default function Routes({ admin, projects, setProjects }) {
           admin={admin}
         />
         <Route
-          path='/project-admin'
-          component={() => <ProjectsAdmin
+          path='/admin-projects'
+          component={() => <ProjectsCRUD
           setProjects={setProjects} />}
           admin={admin}
         />

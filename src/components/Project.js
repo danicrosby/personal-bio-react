@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectCard from '../../components/ProjectCard';
+import ProjectCard from './ProjectCard';
 
-function ProjectsAdmin({ projects, setProjects }) {
+function Projects({ projects, setProjects }) {
   return (
     <>
       <div className="card-container">
@@ -21,9 +21,9 @@ function ProjectsAdmin({ projects, setProjects }) {
   );
 }
 
-ProjectsAdmin.propTypes = {
+Projects.propTypes = {
   projects: PropTypes.array.isRequired,
   setProjects: PropTypes.func.isRequired
 };
 
-export default ProjectsAdmin;
+export default Projects;
