@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectCard from './ProjectCard';
+import AdminProjectCard from './AdminProjectCard';
 
 function AdminProjects({ projects, setProjects }) {
   return (
     <>
       <div className="card-container">
         {projects?.map((projectInfo) => (
-          <ProjectCard
+          <AdminProjectCard
             key={projectInfo.firebaseKey}
             firebaseKey={projectInfo.firebaseKey}
             image={projectInfo.image}

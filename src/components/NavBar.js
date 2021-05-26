@@ -16,13 +16,6 @@ const NavBar = ({ user }) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const authenticated = () => (
-    <>
-      <NavItem><Link className="nav-link" to="/admin-projects">Edit</Link></NavItem>
-      <NavItem><Link className="nav-link" to="/add-project">Add</Link></NavItem>
-    </>
-  );
-
   return (
     <div>
       <Navbar color="light" light expand="md">
@@ -30,18 +23,22 @@ const NavBar = ({ user }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar></Collapse>
         <Nav className="ml-auto" navbar>
-          <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
-          <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
-          {user && authenticated()}
-          {
-            user !== null
-            && <NavItem>
-              {
-                user
-                  ? <Button className="button ml-4 mr-4" color='danger' size="sm" onClick={signOutUser}>Sign Out</Button>
-                  : <Button className="button ml-4 mr-2" color='info' size="sm" onClick={signInUser}>Admin</Button>
-              }
-            </NavItem>
+
+          {user !== null && <NavItem>
+            {
+              user
+                ? <div className="d-flex justify-content-end">
+                  <NavItem><Link className="nav-link" to="/admin-projects">Edit</Link></NavItem>
+                  <NavItem><Link className="nav-link" to="/add-project">Add</Link></NavItem>
+                  <Button className="button ml-4 mr-4" color='danger' size="sm" onClick={signOutUser}>Sign Out</Button>
+                </div>
+                : <div className="d-flex justify-content-end">
+                  <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
+                  <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
+                  <Button className="button ml-4 mr-2" color='info' size="sm" onClick={signInUser}>Admin</Button>
+                </div>
+            }
+          </NavItem>
           }
         </Nav>
       </Navbar>
