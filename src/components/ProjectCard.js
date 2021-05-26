@@ -43,10 +43,10 @@ const ProjectCard = ({
       <CardImg src={image} rounded fluid />
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
-      <Button color="light" onClick={() => handleClick('view')}>View Project</Button>
-      <Button color="light" onClick={() => handleClick('delete')}>Delete Project</Button>
+      <Button color="light" onClick={() => handleClick('view')}>View</Button>
+      <Button color="light" onClick={() => handleClick('delete')}>Delete</Button>
       <Button color="light" onClick={() => handleClick('edit')}>
-        {editing ? 'Close Form' : 'Edit Project'}
+        {editing ? 'Close Form' : 'Edit'}
       </Button>
       {
         editing && <ProjectForm

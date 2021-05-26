@@ -1,9 +1,10 @@
 import React from 'react';
+import AboutMe from '../../components/AboutMe';
 
 export default function Home() {
   return (
     <div>
-      <h1>Home/About Page</h1>
+      {AboutMe}
     </div>
   );
 }

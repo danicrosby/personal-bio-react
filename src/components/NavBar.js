@@ -21,6 +21,7 @@ const NavBar = ({ user }) => {
       <NavItem><Link className="nav-link" to="/about">About</Link></NavItem>
       <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
       <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
+      <NavItem><Link className="nav-link" to="/add-project">Add Project</Link></NavItem>
     </>
   );
 
@@ -37,8 +38,8 @@ const NavBar = ({ user }) => {
             && <NavItem>
               {
                 user
-                  ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
-                  : <Button color='info' onClick={signInUser}>Sign In</Button>
+                  ? <Button color='danger' size="sm" onClick={signOutUser}>Sign Out</Button>
+                  : <Button color='info' size="sm" onClick={signInUser}>Admin</Button>
               }
             </NavItem>
           }

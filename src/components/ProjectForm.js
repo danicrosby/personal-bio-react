@@ -55,7 +55,7 @@ const ProjectForm = ({
   };
 
   return (
-    <div classtitle='projedt-form'>
+    <div className='project-form'>
       <Form id='addProjectForm' autoComplete='off' onSubmit={handleSubmit}>
         <h2>{formTitle}</h2>
         <FormGroup>
@@ -77,7 +77,7 @@ const ProjectForm = ({
             id='description'
             value={project.description}
             type='text'
-            placeholder='Enter a description name'
+            placeholder='Enter a description'
             onChange={handleInputChange}
           />
         </FormGroup>
@@ -90,18 +90,6 @@ const ProjectForm = ({
             value={project.image}
             type='text'
             placeholder='Enter a image'
-            onChange={handleInputChange}
-          />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="uid">UID:</Label>
-          <Input
-            name='uid'
-            id='uid'
-            value={project.uid}
-            type='number'
-            placeholder='Enter a uid'
             onChange={handleInputChange}
           />
         </FormGroup>

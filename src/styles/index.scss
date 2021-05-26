@@ -6,3 +6,11 @@
 body {
   background-color: $favColor;
 }
+
+.tech-icon-container {
+  display: flex;
+  justify-content: center;
+}
+.tech-icons {
+  margin: .4em;
+}

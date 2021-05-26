@@ -9,7 +9,7 @@ export default function Routes({ projects, setProjects }) {
   return (
     <div>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/authed' component={Home} />
         <Route
           path='/projects'
           component={() => <Projects projects={projects} setProjects={setProjects} />}
