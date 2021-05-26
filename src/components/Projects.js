@@ -4,20 +4,18 @@ import ProjectCard from './ProjectCard';
 
 function Projects({ projects, setProjects }) {
   return (
-    <>
-      <div className="card-container">
-        {projects?.map((projectInfo) => (
-          <ProjectCard
-            key={projectInfo.firebaseKey}
-            firebaseKey={projectInfo.firebaseKey}
-            image={projectInfo.image}
-            name={projectInfo.name}
-            description={projectInfo.description}
-            setProjects={setProjects}
-          />
-        ))}
-      </div>
-    </>
+    <div className="card-container">
+      {projects?.map((projectInfo) => (
+        <ProjectCard
+          key={projectInfo.firebaseKey}
+          firebaseKey={projectInfo.firebaseKey}
+          image={projectInfo.image}
+          name={projectInfo.name}
+          description={projectInfo.description}
+          setProjects={setProjects}
+        />
+      ))}
+    </div>
   );
 }
 

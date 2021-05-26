@@ -4,7 +4,7 @@ import AdminProjectCard from './AdminProjectCard';
 
 function AdminProjects({ projects, setProjects }) {
   return (
-    <>
+    <div> <h2>Admin View</h2>
       <div className="card-container">
         {projects?.map((projectInfo) => (
           <AdminProjectCard
@@ -17,7 +17,7 @@ function AdminProjects({ projects, setProjects }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
