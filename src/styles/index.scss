@@ -13,7 +13,8 @@
 }
 
 .profile-image {
-  width: 25em;
+  width: 30em;
+  border-radius: 1em;
 }
 
 .about-img {
@@ -22,9 +23,8 @@
 
 .jumbotron {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 2em;
-  margin-right: 10em;
   background-color: white;
 }
 
@@ -44,14 +44,6 @@
   color: lightgrey;
 }
 
-.hr { 
-  border-color: black; 
-}
-
-.contact {
-  font-size: 12px;
-}
-
 .image-container {
   display: flex;
   justify-content: center;
@@ -69,8 +61,8 @@
 }
 
 #about-me-paragraph {
-  font-size: 17px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6em;
+  line-height: 1.8em;
   margin-top: 1em;
 }
