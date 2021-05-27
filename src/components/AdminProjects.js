@@ -6,7 +6,7 @@ function AdminProjects({ projects, setProjects }) {
   return (
     <div> <h2>Admin View</h2>
       <div className="card-container">
-        {projects?.map((projectInfo) => (
+        {projects.map((projectInfo) => (
           <AdminProjectCard
             key={projectInfo.firebaseKey}
             firebaseKey={projectInfo.firebaseKey}

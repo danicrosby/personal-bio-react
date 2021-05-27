@@ -3,31 +3,74 @@
 @import 'card';
 @import 'form';
 
-body {
-  background-color: $favColor;
-}
-
 .tech-icon-container {
   display: flex;
   justify-content: center;
 }
+
 .tech-icons {
   margin: .3em;
 }
 
 .profile-image {
-  width: 30em;
+  width: 25em;
 }
 
 .about-img {
-  height: 15.5em
+  height: 20em;
 }
-
 
 .jumbotron {
   display: flex;
   justify-content: center;
-  margin-top: 5em;
+  margin-top: 2em;
   margin-right: 10em;
   background-color: white;
+}
+
+.navbar-expand-lg {
+  padding-top: 2em;
+  text-align: end;
+  align-items: start;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: grey;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.hr { 
+  border-color: black; 
+}
+
+.contact {
+  font-size: 12px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  margin-top: 1em;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#sub-title {
+  font-size: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-me-paragraph {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  margin-top: 1em;
 }
