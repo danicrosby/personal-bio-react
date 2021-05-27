@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import {
   CardImg,
   Button,
@@ -19,7 +18,6 @@ const AdminProjectCard = ({
   setProjects
 }) => {
   const [editing, setEditing] = useState(false);
-  const history = useHistory();
 
   const handleClick = (type) => {
     switch (type) {
@@ -29,9 +27,6 @@ const AdminProjectCard = ({
         break;
       case 'edit':
         setEditing((prevState) => !prevState);
-        break;
-      case 'view':
-        history.push(`/projects/${firebaseKey}`);
         break;
       default:
         console.warn('nothing selected');
@@ -43,14 +38,13 @@ const AdminProjectCard = ({
       <CardImg src={image} rounded fluid />
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
-      <Button color="light" onClick={() => handleClick('view')}>Admin View</Button>
       <Button className="buttons" color="light" onClick={() => handleClick('delete')}>Admin Delete</Button>
       <Button className="buttons" color="light" onClick={() => handleClick('edit')}>
         {editing ? 'Close Form' : 'Admin Edit'}
       </Button>
       {
         editing && <ProjectForm
-          formTitle='Admin Edit'
+          formTitle='Edit Form'
           setPlayers={setProjects}
           firebaseKey={firebaseKey}
           name={name}

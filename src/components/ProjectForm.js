@@ -16,11 +16,10 @@ const ProjectForm = ({
   image,
   name,
   description,
-  uid
+  setProjects,
 }) => {
   const [project, setProject] = useState({
     firebaseKey: firebaseKey || null,
-    uid: uid || 0,
     name: name || '',
     description: description || '',
     image: image || '',
@@ -30,19 +29,18 @@ const ProjectForm = ({
   const handleInputChange = (e) => {
     setProject((prevState) => ({
       ...prevState,
-      [e.target.name]:
-        e.target.name === 'uid' ? Number(e.target.value) : e.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (project.firebaseKey) {
-      updateProject(project).then(setProject);
+      updateProject(project).then(setProjects);
     } else {
       addProject(project).then((response) => {
         setProject(response);
-        history.push('/projects');
+        history.push('/admin-projects');
       });
 
       setProject({
@@ -107,7 +105,6 @@ ProjectForm.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string.isRequired,
   firebaseKey: PropTypes.string,
-  uid: PropTypes.number,
 
 };
 
