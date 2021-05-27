@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AdminProjectCard from './AdminProjectCard';
+import ProjectCard from '../../components/ProjectCard';
 
-function AdminProjects({ projects, setProjects }) {
+function Projects({ projects, setProjects }) {
   return (
-    <div> <h2>Admin View</h2>
+    <div className="page-title"><h2>Projects</h2>
       <div className="card-container">
         {projects.map((projectInfo) => (
-          <AdminProjectCard
+          <ProjectCard
             key={projectInfo.firebaseKey}
             firebaseKey={projectInfo.firebaseKey}
             image={projectInfo.image}
@@ -21,9 +21,9 @@ function AdminProjects({ projects, setProjects }) {
   );
 }
 
-AdminProjects.propTypes = {
+Projects.propTypes = {
   projects: PropTypes.array.isRequired,
   setProjects: PropTypes.func.isRequired
 };
 
-export default AdminProjects;
+export default Projects;

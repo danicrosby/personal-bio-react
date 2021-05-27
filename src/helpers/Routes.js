@@ -2,11 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Home from './views/Home';
-import Projects from '../components/Projects';
+import Projects from './views/Projects';
 import SingleProject from '../components/SingleProjectCard';
 import Technologies from '../components/Technologies';
 import AddProject from './views/AddProject';
-import AdminProjects from '../components/AdminProjects';
+import AdminProjects from './views/AdminProjects';
 
 export default function Routes({ admin, projects, setProjects }) {
   return (

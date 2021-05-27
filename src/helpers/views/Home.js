@@ -14,12 +14,15 @@ export default function Home() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav flex-column mb-2 mb-lg-0">
-              <a className="nav-link" href="">Contact</a>
+              <a className="nav-link" href="/projects">Projects</a>
               <a className="nav-link" href="https://poshmark.com/closet/danilionclosets">Business</a>
               <a className="nav-link" href="https://www.linkedin.com/in/dani-crosby/">LinkedIn</a>
               <a className="nav-link" href="https://github.com/danicrosby">Github</a>
               <a className="nav-link" href="https://danicrosby.medium.com/">Medium</a>
+              <a className="nav-link" href="/technologies">Tech</a>
               <a className="nav-link" href="/Resume.pdf">Resume</a>
+              <span className="hr mr-3">______________________</span>
+              <a className="nav-link" href="">Contact</a>
               <a className="nav-link contact" href="">dani.crosby1111@gmail.com</a>
               <a className="nav-link contact" href="">925.588.4948</a>
             </ul>
@@ -41,7 +44,7 @@ export default function Home() {
           </div>
           <div className="col">
             <p id="about-me-paragraph">
-              My name is Dani Crosby. I am a student
+              My name is <span className="bold">Dani Crosby</span>. I am a student
               studying Javascript, React, C#, and .NET at Nashville Software School.
               I have a background in home organization, welding, and as a
               small business owner. I hope to integrate my new software skills, passion for simplicity,
