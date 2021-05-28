@@ -13,6 +13,7 @@ function AdminProjects({ projects, setProjects }) {
             image={projectInfo.image}
             name={projectInfo.name}
             description={projectInfo.description}
+            code={projectInfo.code}
             setProjects={setProjects}
           />
         ))}

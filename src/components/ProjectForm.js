@@ -15,6 +15,7 @@ const ProjectForm = ({
   formTitle,
   image,
   name,
+  code,
   description,
   setProjects,
 }) => {
@@ -23,6 +24,7 @@ const ProjectForm = ({
     name: name || '',
     description: description || '',
     image: image || '',
+    code: code || '',
   });
   const history = useHistory();
 
@@ -104,6 +106,7 @@ ProjectForm.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
   firebaseKey: PropTypes.string,
 
 };
