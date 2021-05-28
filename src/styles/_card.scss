@@ -1,13 +1,22 @@
 .card-container {
   display: flex;
   flex-flow: row wrap;
+}
 
-  .card {
-    width: 20em;
-    margin: 5px;
-  }
+.card {
+  width: 20em;
+  margin: 5px;
+}
 
-  .card-body {
-    flex: none;
-  }
+.card-body {
+  flex: none;
+}
+
+.fab{
+  color: rgb(26, 24, 24);
+}
+
+.fab:hover {
+  text-decoration: none;
+  color: darkorchid;
 }
