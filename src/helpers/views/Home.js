@@ -26,7 +26,7 @@ export default function Home() {
               <a className="nav-link" href="">Contact</a>
               <a className="nav-link contact" href="">dani.crosby1111@gmail.com</a>
               <a className="nav-link contact" href="">925.588.4948</a>
-              <span><a className="nav-link" href="https://ofsds.org/">Donate<i className="fas fa-paw fa-spin ml-2"></i></a></span>
+              <span><a className="nav-link" href="https://ofsds.org/">Donate<i className="fas fa-paw fa-spin bold ml-2"></i></a></span>
             </ul>
           </div>
         </div>
@@ -46,8 +46,8 @@ export default function Home() {
           </div>
           <div className="col mt-2">
             <p id="about-me-paragraph">
-              My name is <span className="bold">Dani Crosby</span>. I am a student
-              studying Javascript, React, C#, and .NET at Nashville Software School.
+              My name is <span className="bold">Dani Crosby</span>. I am studying
+              UI | UX Design, Javascript, React, C#, and .NET at Nashville Software School.
               I have a background in home organization, welding, and as a
               small business owner. I hope to integrate my new software skills, passion for simplicity,
               and workflow efficiency at a local Nashville company.
