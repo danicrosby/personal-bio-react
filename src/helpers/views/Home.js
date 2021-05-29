@@ -27,6 +27,7 @@ export default function Home() {
               <a className="nav-link contact" href="">dani.crosby1111@gmail.com</a>
               <a className="nav-link contact" href="">925.588.4948</a>
               <span><a className="nav-link" href="https://ofsds.org/">Donate<i className="fas fa-paw fa-spin bold ml-2"></i></a></span>
+              <a className="nav-link" href="Resume.pdf">Resume</a>
             </ul>
           </div>
         </div>
