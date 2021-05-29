@@ -1,11 +1,12 @@
 .card-container {
   display: flex;
   flex-flow: row wrap;
+  margin-left: 2em;
 }
 
 .card {
   width: 20em;
-  margin: 5px;
+  margin: 10px;
 }
 
 .card-body {

@@ -28,7 +28,6 @@ ProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
   techUsed: PropTypes.string.isRequired,
-
 };
 
 export default ProjectCard;
