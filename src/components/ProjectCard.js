@@ -11,12 +11,14 @@ const ProjectCard = ({
   name,
   image,
   description,
-  code
+  code,
+  techUsed
 }) => (
   <Card body>
     <CardImg className="project-image mb-3" src={image} rounded fluid />
     <CardTitle tag="h5">{name}<a href={code}><i className="fab fa-github-alt ml-3 fa-spin"></i></a></CardTitle>
     <CardText>{description}</CardText>
+    <CardText>{techUsed}</CardText>
   </Card>
 );
 
@@ -25,6 +27,7 @@ ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
+  techUsed: PropTypes.string.isRequired,
 
 };
 

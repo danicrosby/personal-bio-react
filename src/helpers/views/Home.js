@@ -34,7 +34,7 @@ export default function Home() {
         <img className="profile-image" src={profile} />
       </div>
 
-      <div className="col-lg-4 col-md-3 col-sm-2">
+      <div className="col-lg-4 col-md-3 col-sm-2 mt-2">
         <div id="title">hello,</div>
         <div id="sub-title">THERE</div>
 
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="col-2">
             <img className="about-img" src={about1} />
           </div>
-          <div className="col">
+          <div className="col mt-2">
             <p id="about-me-paragraph">
               My name is <span className="bold">Dani Crosby</span>. I am a student
               studying Javascript, React, C#, and .NET at Nashville Software School.
