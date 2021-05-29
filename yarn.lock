@@ -1,0 +1,5 @@
+snapsvg@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/snapsvg/-/snapsvg-0.4.0.tgz#e0767014167825957de7e125c29b0fa89796ea03"
+  dependencies:
+    eve "~0.4.2"
