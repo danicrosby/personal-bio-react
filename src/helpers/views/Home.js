@@ -14,21 +14,19 @@ export default function Home() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav flex-column mb-2 mb-lg-0">
-              <a className="nav-link" href="/projects"><span className="bold">Projects</span></a>
+              <a className="nav-link" href="/projects">Projects</a>
               <a className="nav-link" href="/technologies">Tech</a>
               <a className="nav-link" href="https://www.linkedin.com/in/dani-crosby/">LinkedIn</a>
               <a className="nav-link" href="https://github.com/danicrosby">Github</a>
               <a className="nav-link" href="https://danicrosby.medium.com/">Medium</a>
-              <span className="hr mr-3">______________________</span>
-              <a className="nav-link" href=""><span className="bold">Business</span></a>
+              <a className="nav-link" href="/projects">Business</a>
               <a className="nav-link" href="https://poshmark.com/closet/danilionclosets">Poshmark</a>
               <a className="nav-link" href="https://www.etsy.com/shop/DanilionClosets/sold">Etsy</a>
-              <a className="nav-link" href="https://ofsds.org/">Donate</a>
               <span className="hr mr-3">______________________</span>
-              <a className="nav-link" href=""><span className="bold">Contact</span></a>
+              <a className="nav-link" href="">Contact</a>
               <a className="nav-link contact" href="">dani.crosby1111@gmail.com</a>
               <a className="nav-link contact" href="">925.588.4948</a>
-              <a className="nav-link" href="Resume.pdf">Resume</a>
+              <span><a className="nav-link" href="https://ofsds.org/">Donate<i className="fas fa-paw fa-spin ml-2"></i></a></span>
             </ul>
           </div>
         </div>
