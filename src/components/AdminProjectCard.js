@@ -35,7 +35,7 @@ const AdminProjectCard = ({
 
   return (
     <Card body>
-      <CardImg src={image} rounded fluid />
+      <CardImg src={image} fluid="true" />
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>{description}</CardText>
       <Button className="buttons" color="light" onClick={() => handleClick('delete')}>Admin Delete</Button>

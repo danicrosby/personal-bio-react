@@ -20,7 +20,7 @@ export default function Home() {
               <a className="nav-link" href="https://github.com/danicrosby">Github</a>
               <a className="nav-link" href="https://danicrosby.medium.com/">Medium</a>
               <a className="nav-link" href="/technologies">Tech</a>
-              <a className="nav-link" href="/Resume.pdf">Resume</a>
+              <a className="nav-link" href="Resume.pdf">Resume</a>
               <span className="hr mr-3">______________________</span>
               <a className="nav-link" href="">Contact</a>
               <a className="nav-link contact" href="">dani.crosby1111@gmail.com</a>

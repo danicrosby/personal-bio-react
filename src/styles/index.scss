@@ -2,15 +2,7 @@
 @import 'variables';
 @import 'card';
 @import 'form';
-
-.tech-icon-container {
-  display: flex;
-  justify-content: center;
-}
-
-.tech-icons {
-  margin: .3em;
-}
+@import 'icons';
 
 .profile-image {
   width: 30em;
@@ -98,4 +90,9 @@
 .daniLogo {
   width: 3em;
   margin-left: 3em;
+}
+
+.signInOut-btn {
+  background-color: darkorchid;
+  opacity: .8;
 }

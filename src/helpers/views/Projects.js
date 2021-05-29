@@ -14,6 +14,7 @@ function Projects({ projects, setProjects }) {
             name={projectInfo.name}
             description={projectInfo.description}
             code={projectInfo.code}
+            techUsed={projectInfo.techUsed}
             setProjects={setProjects}
           />
         ))}

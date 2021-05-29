@@ -30,12 +30,12 @@ const NavBar = ({ user }) => {
                 ? <div className="d-flex justify-content-end">
                   <NavItem><Link className="nav-link" to="/admin-projects">Edit</Link></NavItem>
                   <NavItem><Link className="nav-link" to="/add-project">Add</Link></NavItem>
-                  <Button className="button ml-4 mr-4" color='danger' size="sm" onClick={signOutUser}>Sign Out</Button>
+                  <Button className="button signInOut-btn ml-4 mr-4" size="sm" onClick={signOutUser}>Sign Out</Button>
                 </div>
                 : <div className="d-flex justify-content-end">
                   <NavItem><Link className="nav-link" to="/projects">Projects</Link></NavItem>
                   <NavItem><Link className="nav-link" to="/technologies">Tech</Link></NavItem>
-                  <Button className="button ml-4 mr-2" color='info' size="sm" onClick={signInUser}>Admin</Button>
+                  <Button className="button signInOut-btn ml-4 mr-2" size="sm" onClick={signInUser}>Admin</Button>
                 </div>
             }
           </NavItem>
