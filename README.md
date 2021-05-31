@@ -3,7 +3,7 @@
 Hello, and welcome to personal bio site. I created this site using React, styled componenets a various different installs. Here you will be about to see all the projects I have created during my time at Nashville Software School. Enjoy!
 
 ## Relevant Links
-- [Deployed Site](dani-crosby-bio-react.netlify.app)
+- [Deployed Site](https://dani-crosby-bio-react.netlify.app/)
 
 ### Screenshot
 <img width="954" alt="Screen Shot 2021-05-29 at 11 40 36 AM" src="https://user-images.githubusercontent.com/68397076/120077972-b034ff00-c072-11eb-9931-b436bd164f70.png">
